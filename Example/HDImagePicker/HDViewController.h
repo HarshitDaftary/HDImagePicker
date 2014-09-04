@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HDImagePicker-Prefix.pch"
 
 @interface HDViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgvImported;
+
+- (IBAction)btnGalleryTapped:(id)sender;
 
 @end

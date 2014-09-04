@@ -7,6 +7,7 @@
 //
 
 #import "HDViewController.h"
+#import "HDImagePicker.h"
 
 @interface HDViewController ()
 
@@ -18,12 +19,30 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnGalleryTapped:(id)sender
+{
+    UIImagePickerController *objImagePicker = [[HDImagePicker sharedInstance] presentGalleryPicker:^(NSDictionary *info, BOOL cancelled) {
+       
+        if (!cancelled)
+        {
+           _imgvImported.image = [info objectForKey:UIImagePickerControllerEditedImage];
+        }
+        
+    }];
+    
+    if (objImagePicker)
+        [self presentViewController:objImagePicker animated:YES completion:nil];
 }
 
 @end

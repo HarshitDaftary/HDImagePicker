@@ -1,0 +1,17 @@
+PODS:
+  - HDImagePicker (0.1.0)
+  - Kiwi (2.3.0)
+
+DEPENDENCIES:
+  - HDImagePicker (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  HDImagePicker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HDImagePicker: 49f08bff53362ca33a6121ac2654fda4b95c6820
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+
+COCOAPODS: 0.33.1
