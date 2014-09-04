@@ -1,0 +1,9 @@
+target 'HDImagePicker', :exclusive => true do
+  pod "HDImagePicker", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "HDImagePicker", :path => "../"
+
+  pod 'Kiwi'
+end
